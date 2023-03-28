@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gerador de ideias de campanhas de WhatsApp para o Dia das Mães</title>
+  </head>
+  <body>
+    <h1>Gerador de ideias de campanhas de WhatsApp para o Dia das Mães</h1>
+    <p>Clique no botão abaixo para gerar uma ideia de campanha de WhatsApp:</p>
+    <button type="button" onclick="gerarIdeia()">Gerar ideia</button>
+    <div id="resultado"></div>
+    <script>
+      function gerarIdeia() {
+        let ideias = [
+          {
+            texto: "Parabenize a mãe com uma mensagem personalizada e ofereça um desconto especial em nossos produtos! Use uma imagem de flores ou um coração para chamar a atenção. Inclua um CTA como 'clique aqui' para acessar o desconto ou um link para o site da promoção.",
+            imagem: "https://exemplo.com/flores.jpg"
+          },
+          {
+            texto: "Demonstre seu amor pela sua mãe com uma mensagem emocionante e ofereça um presente exclusivo! Use uma imagem de um presente ou uma caixa de chocolates para chamar a atenção. Inclua um CTA como 'compre agora' ou um link para o site da promoção.",
+            imagem: "https://exemplo.com/presente.jpg"
+          },
+          {
+            texto: "Surpreenda a sua mãe com um presente especial neste Dia das Mães! Use uma imagem de um abraço ou uma família reunida para chamar a atenção. Inclua um CTA como 'confira nossa seleção de presentes' ou um link para o site da promoção.",
+            imagem: "https://exemplo.com/abraço.jpg"
+          }
+        ];
+        let resultado = document.getElementById('resultado');
+        let index = Math.floor(Math.random() * ideias.length);
+        let ideia = ideias[index];
+        resultado.innerHTML = `<p>${ideia.texto}</p><img src="${ideia.imagem}" alt="imagem da campanha">`;
+      }
+    </script>
+  </body>
+</html>
